@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">  
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" 
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Angel</title>
+</head>
+
+<body>
+    <!-- Header -->
+        <header>
+            <a href="/" class="logo">Wedding</a>
+            <a href="#" class="menu" onclick="toggleMenu();">
+                <i class="bi bi-list open"></i>
+                <i class="bi bi-x close"></i>
+            </a>
+            <ul class="nav">
+                <li>
+                    <a class="nav-btn active" href="/" onclick="resetHeader();"
+                        >
+                        <i class="bi bi-house-door"></i>
+                            </a>
+                </li> 
+                <li><a class="nav-btn" href="#" data-target="about">About</a></li>
+                <li><a class="nav-btn" href="#" data-target="services">Services</a></li>
+                <li><a class="nav-btn" href="#" data-target="portfolio">Portfolio</a></li>
+                <li><a class="nav-btn" href="#" data-target="contact">Contact</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <!-- <ion-icon name="search"></ion-icon> -->
+                <i class="bi bi-search-heart" name="search"></i>
+            </div>
+        </header>
+    <!-- Mobile Navigation -->
+    <ul class="nav-mobile">
+        <li>
+            <a class="nav-btn active" href="/" onclick="resetHeader();"
+                >
+                <i class="bi bi-house-door"></i>
+                    </a>
+        </li> 
+        <li><a class="nav-btn" href="#" data-target="about">About</a></li>
+        <li><a class="nav-btn" href="#" data-target="services">Services</a></li>
+        <li><a class="nav-btn" href="#" data-target="portfolio">Portfolio</a></li>
+        <li><a class="nav-btn" href="#" data-target="contact">Contact</a></li>
+    </ul>
+    <!-- Banner -->
+        <div class="banner container-fluid">
+            <div class="bg-slide slide-1 active">
+                <div class="content">
+                    <h1>Wedding</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora officia aspernatur aliquid in impedit suscipit vitae delectus neque et est fuga modi, vel atque ab quos minus doloremque rerum natus necessitatibus odio illum nam sint. Hic aperiam similique officiis, laudantium velit aspernatur placeat? Odio tempore suscipit voluptates, ipsum cumque corrupti.
+                    </p>
+                </div>
+
+                <div class="circle bg">
+                    <img src="./images/wedding-1.jpg" alt="">
+                    <div class="cirle large">
+                        <!-- <img src="./images/wedding-1.jpg" alt=""> -->
+                        <div class="circle small">
+                            <img src="./images/wedding-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="bg-slide slide-2">
+            <div class="content">
+                <h1>Ceremony</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora officia aspernatur aliquid in impedit suscipit vitae delectus neque et est fuga modi, vel atque ab quos minus doloremque rerum natus necessitatibus odio illum nam sint. Hic aperiam similique officiis, laudantium velit aspernatur placeat? Odio tempore suscipit voluptates, ipsum cumque corrupti.
+                </p>
+            </div>
+
+            <div class="circle bg">
+                <img src="./images/wedding-2.jpg" alt="">
+                <div class="cirle large">
+                    <!-- <img src="./images/wedding-1.jpg" alt=""> -->
+                    <div class="circle small">
+                        <img src="./images/wedding-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slide slide-3">
+            <div class="content">
+                <h1>Honeymoon</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora officia aspernatur aliquid in impedit suscipit vitae delectus neque et est fuga modi, vel atque ab quos minus doloremque rerum natus necessitatibus odio illum nam sint. Hic aperiam similique officiis, laudantium velit aspernatur placeat? Odio tempore suscipit voluptates, ipsum cumque corrupti.
+                </p>
+            </div>
+
+            <div class="circle bg">
+                <img src="./images/wedding-3.jpg" alt="">
+                <div class="cirle large">
+                    <!-- <img src="./images/wedding-1.jpg" alt=""> -->
+                    <div class="circle small">
+                        <img src="./images/wedding-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+<ul class="slide-loader">
+    <li><a class="slide-btn active" data-target="slide-1">1</a></li>
+    <li><a class="slide-btn" data-target="slide-2">2</a></li>
+    <li><a class="slide-btn" data-target="slide-3">3</a></li>
+
+</ul>
+
+<div class="share">
+<p>Share</p>
+<a href="#">
+    <!-- <ion-icon name="share"></ion-icon> -->
+    <i class="bi bi-share-fill"></i>
+</a>
+</div>
+
+    <div class="lead">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+            <defs>
+                <path
+                    id="circle"
+                    d="
+                    M 50, 50
+                    m -37, 0
+                    a 37,37 0 1,1 74,0
+                    a 37,37 0 1,1 -74,0"
+                />
+            </defs>
+            <text font-size="17">
+                <textPath xlink:href="#circle">
+                    Will you marry me, Baby... Yes, I do...
+                </textPath>
+            </text>
+        </svg> 
+        <a href="#" class="move-down" onclick="initNavigation();">
+            <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
+            <i class="bi bi-check2"></i>
+        </a>
+    </div>
+    </div>
+    <!-- Main Start -->
+     <main>
+     <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                <h1>About Us</h1>  
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="img-box">
+                        <img src="./images/about-1.jpg" alt="" class="img-fluid" />
+                        <img src="./images/about-2.jpg" alt="" class="corner-img" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="./images/bg-tree.png" alt="" class="section-bg-img" /> 
+                        <h4>Lorem ipsum dolor sit amet!</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Nihil pariatur consequuntur aut in expedita praesentium voluptate hic at sequi rem tenetur, 
+                            doloribus id qui, amet ea? Quia fugit eos necessitatibus esse laborum, libero nemo, nulla non sapiente magni quo voluptatibus harum veritatis quam, 
+                            praesentium blanditiis? Consequuntur quia libero quae eum!
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Nihil pariatur consequuntur aut in expedita praesentium voluptate hic at sequi rem tenetur, 
+                            doloribus id qui, amet ea? Quia fugit eos necessitatibus esse laborum, libero nemo, nulla non sapiente magni quo voluptatibus harum veritatis quam, 
+                            praesentium blanditiis? Consequuntur quia libero quae eum!
+                        </p>
+                        <a href="#" class="section-btn">Discover more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <!-- Services Section -->
+      <section class="services" id="services">
+        <div class="container">
+        <div class="row">
+            <h1>Our Services</h1>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <div class="img-box">
+                    <img src="./images/services-1.jpg" alt="" />
+                </div>  
+                  <div class="details">
+                    <h4>Wedding Plan</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Sunt, voluptas natus sed minus consectetur accusantium, 
+                        a harum officia voluptate deserunt nam porro. 
+                        Vel maiores, voluptatem assumenda sapiente quos ipsam voluptates
+                    </p>
+                    <a href="#" class="section-btn">Discover more</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <div class="img-box">
+                    <img src="./images/services-2.jpg" alt="" />
+                </div>  
+                  <div class="details">
+                    <h4>Ceremony</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Sunt, voluptas natus sed minus consectetur accusantium, 
+                        a harum officia voluptate deserunt nam porro. 
+                        Vel maiores, voluptatem assumenda sapiente quos ipsam voluptates
+                    </p>
+                    <a href="#" class="section-btn">Discover more</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <div class="img-box">
+                    <img src="./images/services-3.jpg" alt="" />
+                </div>  
+                  <div class="details">
+                    <h4>Honeymoon</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Sunt, voluptas natus sed minus consectetur accusantium, 
+                        a harum officia voluptate deserunt nam porro. 
+                        Vel maiores, voluptatem assumenda sapiente quos ipsam voluptates
+                    </p>
+                    <a href="#" class="section-btn">Discover more</a>
+                  </div>
+                </div>
+            </div> 
+        </div>
+        </div>
+      </section>
+     <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+           <h1>Our Portfolio</h1>     
+            </div>
+            <ul id="portfolio-filters" class="d-flex justify-content-center">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-wedding">Wedding</li>
+                <li data-filter=".filter-ceremony">Ceremony</li>
+                <li data-filter=".filter-honeymoon">Honeymoon</li>
+            </ul> 
+
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-1.jpg" alt="">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Wedding Planning 1</h4>
+                        <p>Wedding Planning 1</p>
+                        <a href="./images/portfolio/portfolio-1.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Wedding Planning 1"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details">
+                        <i class="bi bi-link"></i>
+                        
+                    </div>
+                </div>
+                <!-- Map the remaining data into the portfolio card -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-2.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Honeymoon 3</h4>
+                        <p>Honeymoon</p>
+                        <a 
+                        href="./images/portfolio/portfolio-2.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Honeymoon 3"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                    </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-3.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Wedding Planning 2</h4>
+                        <p>Wedding Planning</p>
+                        <a 
+                        href="./images/portfolio/portfolio-3.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Wedding Planning 2"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-4.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Ceremony 2</h4>
+                        <p>Ceremony</p>
+                        <a 
+                        href="./images/portfolio/portfolio-4.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Ceremony 2"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-5.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Honeymoon 2</h4>
+                        <p>Honeymoon</p>
+                        <a 
+                        href="./images/portfolio/portfolio-5.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Honeymoon 2"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                    </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-6.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Wedding Planning 3</h4>
+                        <p>Wedding Planning</p>
+                        <a 
+                        href="./images/portfolio/portfolio-6.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Wedding Planning 3"
+                        >
+                        <i class="bi bi-plus"></i>
+                    </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-7.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Ceremony 1</h4>
+                        <p>Ceremony</p>
+                        <a 
+                        href="./images/portfolio/portfolio-7.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Ceremony 1"
+                        >
+                        <i class="bi bi-plus"></i>
+                    </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-8.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Ceremony 3</h4>
+                        <p>Ceremony</p>
+                        <a 
+                        href="./images/portfolio/portfolio-8.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Ceremony 3"
+                        >
+                        <i class="bi bi-plus"></i>
+                    </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+                    <div class="portfolio-img">
+                        <img class="img-fluid" src="./images/portfolio/portfolio-9.jpg" alt=""/>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Honeymoon 1</h4>
+                        <p>Honeymoon</p>
+                        <a 
+                        href="./images/portfolio/portfolio-9.jpg" 
+                        data-gallery="portfolioGallery"
+                        class="portfolio-lightbox preview-link"
+                        title="Honeymoon 1"
+                        >
+                        <i class="bi bi-plus"></i>
+                        </a>
+                    <a href="#" class="details-link" title="More Details"
+                    >
+                    <i class="bi bi-link"></i>
+                    </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div> 
+      </section> 
+     <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+           <div class="row">
+            <h1>Contact Us</h1>
+           </div> 
+           <!-- Insert your map here, Google Map embedment -->
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2471.257746990935!2d75.32144657666282!3d51.728320871864504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42582b08abeb759b%3A0xc24f699ddad86a7f!2sMaxi%20Mall!5e0!3m2!1sru!2skz!4v1743258466896!5m2!1sru!2skz" 
+                width="600" height="450" style="border:0;" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                   <div class="info">
+                    <div class="address">
+                        <i class="bi bi-geo-alt con"></i>
+                        <h4>Location:</h4>
+                        <p>47a Mukhtar Auezov str., Ekibastuz 140000</p>
+                    </div>
+                    <div class="email">
+                        <i class="bi bi-envelope con"></i>
+                        <h4>Email:</h4>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="phone">
+                        <i class="bi bi-telephone con"></i>
+                        <h4>Call:</h4>
+                        <p> +7 123 456 7890</p>
+                    </div>
+                   </div> 
+                </div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                  <form>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input 
+                            type="text" class="form-control" 
+                            placeholder="Your Name"
+                            required
+                            />
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            placeholder="Your Email"
+                            required
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Subject"
+                        required />
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea 
+                        class="form-control"
+                        name="message" 
+                        id="message" rows="5" 
+                        placeholder="Message"
+                        required
+                        ></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit">Send Message</button>
+                    </div>
+                  </form> 
+                </div>
+            </div>
+        </div>
+      </section>
+     </main>
+    <!-- Main End -->
+    <!-- javaScript Vendors -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- Customised javaScript  -->
+     <script src="./js/isotope.js"></script>
+     <script src="./js/glightbox.js"></script>
+     <script src="./js/main.js"></script>
+
+</body>
+
+</html>
