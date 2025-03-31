@@ -79,6 +79,22 @@ const toggleMenu = () => {
     menu.classList.toggle('active');
     navMobile.classList.toggle('active');
 };
+document.getElementById('shareButton').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Мой сайт',
+                text: 'Посмотри этот классный сайт!',
+                url: window.location.href
+            });
+            console.log('Контент успешно отправлен');
+        } catch (error) {
+            console.log('Ошибка при отправке: ', error);
+        }
+    } else {
+        alert('Функция "Поделиться" не поддерживается на этом устройстве');
+    }
+});
 
 
 
